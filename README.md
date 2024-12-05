@@ -12,8 +12,6 @@
 - [Folder Structure](#folder-structure)
 - [File Upload and Parsing](#file-upload-and-parsing)
 - [AI Integration](#ai-integration)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Project Overview
 
