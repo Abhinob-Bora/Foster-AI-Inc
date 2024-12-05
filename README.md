@@ -31,6 +31,7 @@
 - **Styling**: CSS for a responsive and professional UI design.
 
 ## Installation
+Paste your groq api key in place of **GROQ_API_KEY**
 
 ### Prerequisites
 
@@ -60,6 +61,8 @@ Creating a New Template: Click the "New Note +" button to open the template form
 Editing an Existing Template: Click on a template in the list to open it for editing.
 Uploading Files: Use the file upload section to add .docx or .pdf files. The content will be extracted and displayed in the template text area.
 Rewriting Text: Click the rewrite icon (✏️) to send the content to the AI service for rewriting. The rewritten content will be displayed in the text area.
+
+
 
 
 
