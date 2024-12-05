@@ -1,17 +1,42 @@
-import React from 'react';
+import React, { useState, useEffect } from "react";
+import "./TemplateList.css"; // Ensure your CSS file is imported
 
 function TemplateList({ templates, onSelectTemplate, onDeleteTemplate }) {
+  const [activeTemplate, setActiveTemplate] = useState(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (!event.target.closest(".template-box")) {
+        setActiveTemplate(null);
+      }
+    };
+
+    document.addEventListener("click", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, []);
+
+  const handleTemplateClick = (template) => {
+    setActiveTemplate(template.title);
+    onSelectTemplate(template);
+  };
+
   return (
     <div className="template-list">
-      <h2>Saved Templates</h2>
-      <ul>
-        {templates.map((template) => (
-          <li key={template.title}>
-            <span onClick={() => onSelectTemplate(template)}>{template.title}</span>
-            <button onClick={() => onDeleteTemplate(template.title)}>Delete</button>
-          </li>
-        ))}
-      </ul>
+      {templates.map((template) => (
+        <div
+          key={template.title}
+          className={`template-box ${
+            activeTemplate === template.title ? "active" : ""
+          }`}
+          onClick={() => handleTemplateClick(template)}
+        >
+          <div className="template-title">{template.title}</div>
+          <div className="template-timestamp">{template.timestamp}</div>
+        </div>
+      ))}
     </div>
   );
 }

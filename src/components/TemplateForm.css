@@ -1,0 +1,177 @@
+.template-form {
+  position: relative;
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+  box-sizing: border-box;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  color: #333;
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.close-button:hover {
+  color: #dc3545; /* Red color for hover */
+}
+
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #444;
+}
+
+.input-field,
+.textarea-field {
+  width: 100%;
+  padding: 12px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  margin-top: 5px;
+  font-size: 16px;
+  box-sizing: border-box; /* Ensures padding is included in width */
+}
+.textarea-field {
+  width: 100%;
+  height: 200px; /* Optional: Set a default height */
+  padding: 12px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  margin-top: 5px;
+  font-size: 16px;
+  box-sizing: border-box; /* Ensures padding is included in width */
+  resize: vertical; /* Allows only vertical resizing */
+  overflow-x: hidden; /* Restrict horizontal overflow */
+  overflow-y: auto; /* Allows vertical scrolling */
+}
+
+.input-field:focus,
+.textarea-field:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.rewrite-icon {
+  cursor: pointer;
+  margin-left: 5px;
+  color: #007bff;
+  font-size: 18px;
+}
+
+.file-upload-section {
+  margin: 20px 0; /* Adds a bit more space around the upload section */
+}
+
+.save-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.save-button:hover {
+  background-color: #0056b3;
+}
+
+.save-button:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+.loading-message {
+  color: #007bff;
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+.error-message {
+  color: #dc3545;
+  background-color: #f8d7da;
+  padding: 12px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  border: 1px solid #dc3545;
+}
+.file-upload-section {
+  margin-top: 20px;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  background-color: #f1f3f5; /* Light background for a subtle contrast */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.file-upload-section h3 {
+  margin-bottom: 10px;
+  color: #333;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.file-upload-label {
+  display: inline-block;
+  padding: 10px 15px;
+  border: 2px dashed #007bff;
+  border-radius: 6px;
+  color: #007bff;
+  text-align: center;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  margin-bottom: 10px; /* Adds a gap between upload text and chosen file line */
+}
+
+.file-upload-label:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.file-upload-input {
+  display: none; /* Hide the actual input */
+}
+
+.no-file-chosen {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #666;
+}
+
+/* Style for the actual chosen file line */
+.file-chosen {
+  font-size: 16px;
+  color: #333;
+  font-weight: bold;
+  margin-top: 5px;
+}

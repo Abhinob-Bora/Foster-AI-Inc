@@ -1,0 +1,52 @@
+/* Template List Container */
+.template-list {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0 auto;
+  }
+  
+  /* Template Box */
+  .template-box {
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    height: 70px; /* Slightly larger height for better alignment */
+  }
+  
+  .template-box:hover {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .template-box.active {
+    background-color: #d7f9ff; /* Light blue for the selected template */
+    border: 1px solid #0082a8; /* Highlight border */
+    box-shadow: 0px 4px 10px rgba(0, 130, 168, 0.3);
+  }
+  
+  /* Headline Title (Top) */
+  .template-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    text-align: left;
+    margin-bottom: 5px;
+  }
+  
+  /* Timestamp (Bottom Left) */
+  .template-timestamp {
+    font-size: 12px;
+    color: #555;
+    position: absolute;
+    bottom: 10px;
+    left: 15px;
+  }
+  
