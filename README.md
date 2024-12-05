@@ -65,22 +65,6 @@ Editing an Existing Template: Click on a template in the list to open it for edi
 Uploading Files: Use the file upload section to add .docx or .pdf files. The content will be extracted and displayed in the template text area.
 Rewriting Text: Click the rewrite icon (✏️) to send the content to the AI service for rewriting. The rewritten content will be displayed in the text area.
 
-**Structure**:
-Foster-AI-Inc/
-├── public/
-│   └── index.html
-├── src/
-│   ├── components/
-│   │   ├── FileUpload.js
-│   │   ├── TemplateForm.js
-│   │   ├── TemplateList.js
-│   ├── utils/
-│   │   ├── fileParser.js
-│   │   ├── localStorageHelper.js
-│   ├── App.js
-│   ├── index.js
-│   └── App.css
-└── package.json
 
 
 
