@@ -9,9 +9,7 @@
 - [Technologies Used](#technologies-used)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Folder Structure](#folder-structure)
-- [File Upload and Parsing](#file-upload-and-parsing)
-- [AI Integration](#ai-integration)
+
 
 ## Project Overview
 
