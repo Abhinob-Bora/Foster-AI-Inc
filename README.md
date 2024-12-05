@@ -19,6 +19,9 @@ This React application enables users to manage, view, and interact with template
 Clone the repository to your local machine:
 ```bash
 git clone <repository-url>
+
+```
+
 Step 2: Navigate to the Project Directory
 bash
 Copy code
