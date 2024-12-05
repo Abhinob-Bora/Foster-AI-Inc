@@ -1,70 +1,69 @@
-# Getting Started with Create React App
+# FosterHealth Clinical Note Manager
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**FosterHealth** is a web application designed to streamline the management of clinical templates for medical professionals. With capabilities for creating, editing, and storing clinical notes, this app offers a user-friendly interface, integration with file uploads for document parsing, and support for automated rewriting using AI.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Project Overview](#project-overview)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Folder Structure](#folder-structure)
+- [File Upload and Parsing](#file-upload-and-parsing)
+- [AI Integration](#ai-integration)
 
-### `npm start`
+## Project Overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+**FosterHealth** is designed to help healthcare professionals organize and manage their clinical notes efficiently. It enables users to create new templates, edit existing ones, and save them locally for future reference. Users can upload .docx and .pdf documents, which are parsed to extract template content, and rewrite the content for improved clarity using AI.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Features
 
-### `npm test`
+- **Create and Edit Templates**: Users can create new templates and edit existing ones.
+- **File Upload and Parsing**: Support for uploading .docx and .pdf files with content extraction.
+- **Rewriting with AI**: Integrate with AI services to rewrite the text for clarity and professionalism.
+- **Local Storage**: Store templates in local storage for offline access and persistence.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Technologies Used
 
-### `npm run build`
+- **Frontend**: React.js
+- **State Management**: React hooks (`useState`, `useEffect`)
+- **File Parsing**: Custom utility functions for parsing .docx and .pdf files.
+- **AI API Integration**: Groq API for content rewriting.
+- **Styling**: CSS for a responsive and professional UI design.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Prerequisites
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Ensure you have the following installed on your system:
 
-### `npm run eject`
+- [Node.js](https://nodejs.org/en/download/) (v14 or higher)
+- npm or yarn
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Steps
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. **Clone the repository**:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+   ```bash
+   git clone https://github.com/your-username/foster-health.git
+   ```
+2. **Installation command**:
+     ```bash
+     npm install
+    ```
+3. **Installation command**:
+     ```bash
+     npm start
+     ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+**Usage**:
+Creating a New Template: Click the "New Note +" button to open the template form. Enter the title and content, and click "Save Template" to store the template.
+Editing an Existing Template: Click on a template in the list to open it for editing.
+Uploading Files: Use the file upload section to add .docx or .pdf files. The content will be extracted and displayed in the template text area.
+Rewriting Text: Click the rewrite icon (✏️) to send the content to the AI service for rewriting. The rewritten content will be displayed in the text area.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
