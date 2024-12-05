@@ -1,105 +1,87 @@
-# React Template Application
+# FosterHealth Clinical Note Manager
 
-## Overview
-This React application enables users to manage, view, and interact with templates. It includes functionalities for template selection, editing, and applying active highlights, as well as handling clicks outside of templates to remove the highlight.
+**FosterHealth** is a web application designed to streamline the management of clinical templates for medical professionals. With capabilities for creating, editing, and storing clinical notes, this app offers a user-friendly interface, integration with file uploads for document parsing, and support for automated rewriting using AI.
+
+## Table of Contents
+
+- [Project Overview](#project-overview)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Folder Structure](#folder-structure)
+- [File Upload and Parsing](#file-upload-and-parsing)
+- [AI Integration](#ai-integration)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Project Overview
+
+**FosterHealth** is designed to help healthcare professionals organize and manage their clinical notes efficiently. It enables users to create new templates, edit existing ones, and save them locally for future reference. Users can upload .docx and .pdf documents, which are parsed to extract template content, and rewrite the content for improved clarity using AI.
 
 ## Features
-- **Create and Edit Templates**: Add new templates and modify existing ones.
-- **Template Selection**: Select templates to edit and highlight them.
-- **Click Outside to Deselect**: Remove the highlight from a template when clicking outside of it.
-- **Local Storage Support**: Persist templates in local storage to maintain data across sessions.
 
-## Prerequisites
-- [Node.js](https://nodejs.org/) (>= 14.x recommended)
-- [npm](https://www.npmjs.com/) (Node Package Manager)
+- **Create and Edit Templates**: Users can create new templates and edit existing ones.
+- **File Upload and Parsing**: Support for uploading .docx and .pdf files with content extraction.
+- **Rewriting with AI**: Integrate with AI services to rewrite the text for clarity and professionalism.
+- **Local Storage**: Store templates in local storage for offline access and persistence.
+
+## Technologies Used
+
+- **Frontend**: React.js
+- **State Management**: React hooks (`useState`, `useEffect`)
+- **File Parsing**: Custom utility functions for parsing .docx and .pdf files.
+- **AI API Integration**: Groq API for content rewriting.
+- **Styling**: CSS for a responsive and professional UI design.
 
 ## Installation
 
-### Step 1: Clone the Repository
-Clone the repository to your local machine:
-```bash
-git clone <repository-url>
+### Prerequisites
 
-```
+Ensure you have the following installed on your system:
 
-Step 2: Navigate to the Project Directory
-bash
-Copy code
-cd <project-folder>
-Step 3: Install Dependencies
-bash
-Copy code
-npm install
-Step 4: Set Up Environment Variables
-Create a .env file in the root of your project and add your GROQ API key:
+- [Node.js](https://nodejs.org/en/download/) (v14 or higher)
+- npm or yarn
 
-bash
-Copy code
-REACT_APP_GROQ_API_KEY=your-groq-api-key-here
-Note: Make sure to replace your-groq-api-key-here with your actual API key.
+### Steps
 
-Step 5: Start the Development Server
-bash
-Copy code
-npm start
-Your app will be accessible at http://localhost:3000.
+1. **Clone the repository**:
 
-Folder Structure
-lua
-Copy code
-/<project-root>
-|-- /src
-|   |-- /components
-|   |   |-- TemplateForm.js
-|   |   |-- TemplateList.js
-|   |-- App.js
-|   |-- index.js
-|   |-- App.css
-|   |-- TemplateList.css
-|-- .env
-|-- package.json
-|-- README.md
-Components Overview
-App.js
-Purpose: The main application component that manages the state and renders TemplateList and TemplateForm.
-State Variables:
-templates: Array storing template objects.
-selectedTemplate: The currently selected template for editing.
-isFormOpen: Boolean indicating whether the form is open or not.
-Functions:
-saveTemplate: Saves or updates a template and stores it in local storage.
-deleteTemplate: Deletes a template from the state and local storage.
-onCancel: Closes the form and resets selectedTemplate.
-TemplateList.js
-Purpose: Displays a list of template boxes. Templates can be clicked to select and view or edit.
-State Variables:
-activeTemplate: The title of the currently active template.
-Functions:
-handleTemplateClick: Marks a template as active and calls the onSelectTemplate prop.
-handleClickOutside: Closes the active highlight when a click outside of the template boxes is detected.
-TemplateForm.js
-Purpose: A form component for creating or editing templates.
-Props:
-selectedTemplate: The template being edited (optional).
-onSave: Callback for saving the template.
-onCancel: Callback for closing the form without saving.
-Environment Variables
-This application uses environment variables for securely accessing the GROQ API.
+   ```bash
+   git clone https://github.com/your-username/foster-health.git
+   ```
+2. **Installation command**:
+     ```bash
+     npm install
+    ```
+3. **Installation command**:
+     ```bash
+     npm start
+     ```
 
-Required Environment Variable
-REACT_APP_GROQ_API_KEY: Your GROQ API key.
-Add the variable to your .env file:
+**Usage**:
+Creating a New Template: Click the "New Note +" button to open the template form. Enter the title and content, and click "Save Template" to store the template.
+Editing an Existing Template: Click on a template in the list to open it for editing.
+Uploading Files: Use the file upload section to add .docx or .pdf files. The content will be extracted and displayed in the template text area.
+Rewriting Text: Click the rewrite icon (✏️) to send the content to the AI service for rewriting. The rewritten content will be displayed in the text area.
 
-bash
-Copy code
-REACT_APP_GROQ_API_KEY=your-groq-api-key-here
-Usage
-Once installed and started, you can use the application to:
+**Structure**:
+Foster-AI-Inc/
+├── public/
+│   └── index.html
+├── src/
+│   ├── components/
+│   │   ├── FileUpload.js
+│   │   ├── TemplateForm.js
+│   │   ├── TemplateList.js
+│   ├── utils/
+│   │   ├── fileParser.js
+│   │   ├── localStorageHelper.js
+│   ├── App.js
+│   ├── index.js
+│   └── App.css
+└── package.json
 
-Create new templates by clicking the "New Note +" button.
-View and edit existing templates by clicking on them.
-Close the form or deselect templates by clicking outside the template boxes.
-Commands Summary
-Install Dependencies: npm install
-Start Development Server: npm start
-Build for Production: npm run build
+
+
+
